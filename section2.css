@@ -1,0 +1,84 @@
+ /*Untitled-1.css*/
+            *{
+                margin: 10px 0px 0px 0px;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'popins',sans-serif;
+            }
+         section{
+            display:flex;
+            justify-content:center;
+            width: 100%;
+            height: 60vh;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center; 
+         }   
+         .login-box{
+            position: relative;
+            width: 350px;
+            height: 500px;
+            background: transparent;
+            border: 1px solid #e10a60;
+            border-radius: 30px 0px 30px 0px;
+            display: flex;
+            justify-content: center;
+            padding: 35px 0px 20px 0px;
+            backdrop-filter: blur(15px);
+            margin-bottom: 0px;
+         }
+         .input{
+          border-radius: 3px;
+          border: 0.5px groove #fdffff;
+          padding:7px 5px ;
+          margin:0.5px 35px;
+          font-size: 13px;
+          background-color: #e8e6e6;
+          width:250px;
+         }
+         h2{
+            text-align: center;
+            font-size:50px;
+            color: rgb(241, 197, 232);
+            margin-bottom: 30px;
+         }
+         .submit{
+            background-color:#57a6ff;
+            font-weight:400;
+            border-radius: 9px;
+            border:none; 
+            margin: 10px 25px 0px 30px;  
+            font-size: 14.5px; 
+            color: #ffffff;
+            padding: 7px 107px;
+         }
+         label{
+            font-weight: 400;
+            font-family: Arial, Helvetica, sans-serif; 
+         }
+         a{
+            font-size: 13.5px;
+            margin-left: 1px;
+            font-weight: 600;
+            color: #57a6ff;
+         }
+         .register-link{
+            position: relative;
+            width: 350px;
+            height: 80px;
+            background: transparent;
+            border: 1px solid #e10a60;
+            border-radius: 30px 0px 30px 0px;
+            display: flex;
+            justify-content: center;
+            padding: 0px;
+            backdrop-filter: blur(15px);
+            padding: 10px 10px 0px 10px;
+         }
+         #success{
+            position: absolute;
+            justify-content: center;
+            color: #e10a60;
+            font-size: 50px;
+            padding-bottom: 10px;
+         }
