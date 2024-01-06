@@ -68,6 +68,8 @@
             border: 1px solid #e10a60;
             border-radius: 30px 0px 30px 0px;
             backdrop-filter: blur(15px);
+            display: flex;
+            justify-content: center;
          }
          #success{
             font-size: 20px;
